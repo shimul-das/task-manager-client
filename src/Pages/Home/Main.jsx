@@ -12,7 +12,7 @@ const Main = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await fetch('http://localhost:5000/post');
+      const response = await fetch('https://task-manager-server-flax.vercel.app/post');
       if (response.ok) {
         const tasksData = await response.json();
         setTasks(tasksData);
@@ -38,7 +38,7 @@ const Main = () => {
       };
   
       try {
-        const response = await fetch('http://localhost:5000/post', {
+        const response = await fetch('https://task-manager-server-flax.vercel.app/post', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ const Main = () => {
   
   const handleUpdateTaskStatus = async (taskId) => {
     try {
-      const response = await fetch(`http://localhost:5000/post/${taskId}`, {
+      const response = await fetch(`https://task-manager-server-flax.vercel.app/post/${taskId}`, {
         method: 'PUT',
       });
   
@@ -101,7 +101,7 @@ const Main = () => {
 
   const handleDeleteTask = async (taskId) => {
     try {
-      const response = await fetch(`http://localhost:5000/post/${taskId}`, {
+      const response = await fetch(`https://task-manager-server-flax.vercel.app/post/${taskId}`, {
         method: 'DELETE',
       });
   
