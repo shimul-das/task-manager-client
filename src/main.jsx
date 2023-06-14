@@ -17,9 +17,7 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/',
-        element:<Main></Main>,
-        // loader:()=>fetch(`https://chef-recipe-hunter-server-pearl.vercel.app/chefs`)
-        // loader:()=>fetch(`http://localhost:5888/chefs`)
+        element:<Main></Main>
       }
     ]
   },
